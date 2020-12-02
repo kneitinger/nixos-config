@@ -14,4 +14,8 @@
     tree
     wget
   ];
+
+  services.openssh = {
+    enable = true;
+  };
 }
