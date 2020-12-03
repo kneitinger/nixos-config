@@ -5,6 +5,7 @@
 {
   environment.systemPackages = with pkgs; [
     (neovim.override {withPython3 = true;})
+    file
     git
     htop
     killall
