@@ -174,6 +174,8 @@
         RUNTIME_PM_DRIVER_BLACKLIST="\"mei_me nouveau nvidia pcieport radeon\"";
         RADEON_DPM_STATE_ON_AC="performance";
         RADEON_DPM_STATE_ON_BAT="battery";
+        CPU_SCALING_GOVERNOR_ON_AC="performance";
+        CPU_SCALING_GOVERNOR_ON_BAT="ondemand";
       };
     };
 
