@@ -234,7 +234,7 @@
     barrier
     bash
     blueberry
-    #bottom
+    bottom
     ccache
     chromium
     clinfo
