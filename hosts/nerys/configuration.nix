@@ -179,7 +179,7 @@
 
     picom = {
       enable = true;
-      fade = true;
+      fade = false;
       inactiveOpacity = 1.0;
       shadow = true;
       shadowOpacity = 0.82;
