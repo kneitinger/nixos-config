@@ -209,7 +209,12 @@
   #
   programs = {
     # Install zsh and completions
-    zsh.enable = true;
+    zsh = {
+      enable = true;
+      # Since I set my own completion options, disabling the global compinit
+      # speeds up shell startup because it is only ran one time.
+      enableGlobalCompInit = false;
+    };
     nm-applet.enable = true;
     light.enable = true;
     ssh = {
