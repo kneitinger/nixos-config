@@ -13,8 +13,8 @@
     autoScrub.enable = true;
     autoSnapshot = {
       enable = true;
-      frequent = 8; # keep the latest eight 15-minute snapshots (instead of four)
-      monthly = 6;  # keep only six monthly snapshots (instead of twelve)
+      frequent = 8; # keep 2 hours of 15-min snapshots
+      monthly = 6;  # keep 6 monthly snapshots
     };
     trim.enable = true;
   };
