@@ -109,8 +109,7 @@
     displayManager = {
       defaultSession = "none+i3";
       sessionCommands = ''
-        # /home/leaf/bin/keyset
-        # /home/leaf/.i3/i3-file-watch.sh
+        ${pkgs.dunst}/bin/dunst &
       '';
     };
 
