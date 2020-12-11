@@ -115,8 +115,22 @@
 
     xautolock = {
       enable = true;
-      locker = "${pkgs.i3lock}/bin/i3lock -c 5a5376";
-      time = 15;
+
+      # Lock
+      locker = "${config.security.wrapperDir}/physlock";
+      time = 20;
+
+      # Suspend
+      killer = "/run/current-system/systemd/bin/systemctl suspend";
+      killtime = 35;
+
+      # Notify
+      enableNotifier = true;
+      notify = 30; # In seconds
+      notifier = "${pkgs.dunst}/bin/dunstify \"xautolock\" \"Locking soon!\"";
+
+      # Top-right corer inhibits lock, bottom-right triggers lock
+      extraOptions = [ "-corners 0-0+" "-cornerdelay 4" ];
     };
 
     windowManager.i3 = {
@@ -163,6 +177,10 @@
   # Services
   #
   services = {
+    physlock = {
+      enable = true;
+      allowAnyUser = true;
+    };
     fwupd.enable = true;
 
     tlp = {
