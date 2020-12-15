@@ -189,6 +189,7 @@
     tlp = {
       enable = true;
       settings = {
+        USB_BLACKLIST_BTUSB=1;
         START_CHARGE_THRESH_BAT0=40;
         STOP_CHARGE_THRESH_BAT0=50;
         RUNTIME_PM_DRIVER_BLACKLIST="\"mei_me nouveau nvidia pcieport radeon\"";
