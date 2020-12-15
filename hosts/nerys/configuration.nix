@@ -202,6 +202,7 @@
       inactiveOpacity = 1.0;
       shadow = true;
       shadowOpacity = 0.82;
+      opacityRules = [ "96:class_g = 'Rofi'" ];
     };
 
     gvfs.enable = true;
