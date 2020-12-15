@@ -129,8 +129,8 @@
       notify = 30; # In seconds
       notifier = "${pkgs.dunst}/bin/dunstify \"xautolock\" \"Locking soon!\"";
 
-      # Top-right corer inhibits lock, bottom-right triggers lock
-      extraOptions = [ "-corners 0-0+" "-cornerdelay 4" ];
+      # Top-right corer inhibits lock
+      extraOptions = [ "-corners 0-00" "-cornerdelay 4" "-detectsleep" ];
     };
 
     windowManager.i3 = {
