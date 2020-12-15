@@ -181,6 +181,9 @@
       enable = true;
       allowAnyUser = true;
     };
+
+    autorandr.enable = true;
+
     fwupd.enable = true;
 
     tlp = {
