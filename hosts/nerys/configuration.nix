@@ -209,6 +209,7 @@
 
     redshift = {
       enable = true;
+      executable = "/bin/redshift-gtk";
       brightness = {
         # Note the string values below.
         day = "1";
