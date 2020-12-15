@@ -202,7 +202,6 @@
       inactiveOpacity = 1.0;
       shadow = true;
       shadowOpacity = 0.82;
-      fadeDelta = 3;
     };
 
     gvfs.enable = true;
