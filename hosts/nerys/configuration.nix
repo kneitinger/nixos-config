@@ -221,8 +221,8 @@
         night = "1";
       };
       temperature = {
-        day = 5500;
-        night = 3700;
+        day = 4800;
+        night = 3300;
       };
     };
   };
