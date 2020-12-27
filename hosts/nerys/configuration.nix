@@ -271,7 +271,7 @@
     gimp
     gnome3.file-roller
     gnumake
-    inkscape
+    inkscape-with-extensions
     joplin-desktop
     jq
     kdeApplications.kdeconnect-kde
