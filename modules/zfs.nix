@@ -6,8 +6,6 @@
 {
   boot.supportedFilesystems = ["zfs"];
   boot.zfs.requestEncryptionCredentials = true;
-  # See https://grahamc.com/blog/nixos-on-zfs
-  boot.kernelParams = [ "elevator=none" ];
 
   services.zfs = {
     autoScrub.enable = true;
