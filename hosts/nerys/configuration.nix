@@ -60,7 +60,8 @@
     # Default: 97
     speed = 127;
     # Default: 128
-    sensitivity = 180;
+    sensitivity = 215;
+    emulateWheel = true;
   };
 
 
