@@ -19,4 +19,10 @@
   services.openssh = {
     enable = true;
   };
+
+  environment.shellAliases = {
+    ll = "ls -lah";
+    la = "ls -a";
+    vim = "nvim";
+  };
 }
