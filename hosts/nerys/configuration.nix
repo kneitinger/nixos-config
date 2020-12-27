@@ -261,6 +261,7 @@
     ccache
     chromium
     clinfo
+    direnv
     dmrconfig
     docker-compose
     firefox
