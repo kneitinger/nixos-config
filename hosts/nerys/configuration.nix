@@ -287,7 +287,7 @@
     phoronix-test-suite
     pkg-config
     powertop
-    python3
+    python3Full
     python3Packages.pynvim
     qemu_kvm
     rsync
