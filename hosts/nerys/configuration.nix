@@ -93,6 +93,7 @@
   fonts.fonts = with pkgs; [
     fantasque-sans-mono
     font-awesome
+    noto-fonts-emoji
     jost # <3 https://indestructibletype.com <3
   ];
 
