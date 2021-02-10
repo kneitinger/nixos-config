@@ -198,14 +198,16 @@
     tlp = {
       enable = true;
       settings = {
-        USB_BLACKLIST_BTUSB=1;
-        START_CHARGE_THRESH_BAT0=40;
-        STOP_CHARGE_THRESH_BAT0=50;
+        #USB_BLACKLIST_BTUSB=1;
+        START_CHARGE_THRESH_BAT0=45;
+        STOP_CHARGE_THRESH_BAT0=55;
         RUNTIME_PM_DRIVER_BLACKLIST="\"mei_me nouveau nvidia pcieport radeon\"";
         RADEON_DPM_STATE_ON_AC="performance";
         RADEON_DPM_STATE_ON_BAT="battery";
-        CPU_SCALING_GOVERNOR_ON_AC="performance";
+        CPU_SCALING_GOVERNOR_ON_AC="ondemand";
         CPU_SCALING_GOVERNOR_ON_BAT="ondemand";
+        CPU_BOOST_ON_AC=1;
+        CPU_BOOST_ON_BAT=0;
       };
     };
 
