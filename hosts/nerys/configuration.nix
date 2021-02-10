@@ -56,11 +56,6 @@
     # Uncomment to fall back to specific version, otherwise go with channel's
     kernelPackages = with pkgs; linuxPackages_latest;
     extraModulePackages = with config.boot.kernelPackages; [ acpi_call ];
-
-    # Fix intermittent WiFi hiccups
-    extraModprobeConfig = ''
-      options iwlwifi 11n_disable=8
-    '';
   };
 
   hardware.bluetooth = {
