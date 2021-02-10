@@ -27,8 +27,7 @@
     networkmanager.wifi.powersave = true;
 
     useDHCP = false; # Deprecated in favor of below per-device options
-    interfaces.enp2s0f0.useDHCP = true;
-    interfaces.wlp3s0.useDHCP = true;
+    interfaces.wlp2s0.useDHCP = true;
 
     firewall = {
       enable = true;
