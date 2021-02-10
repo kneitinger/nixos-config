@@ -23,6 +23,7 @@
     hostName = "nerys"; # Define your hostname.
     hostId = "5c760be4"; # Required for ZFS
     networkmanager.enable = true;
+    networkmanager.wifi.powersave = true;
 
     useDHCP = false; # Deprecated in favor of below per-device options
     interfaces.enp2s0f0.useDHCP = true;
