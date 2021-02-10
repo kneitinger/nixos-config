@@ -63,7 +63,10 @@
     '';
   };
 
-  hardware.bluetooth.enable = true;
+  hardware.bluetooth = {
+    enable = true;
+    package = pkgs.bluezFull;
+  };
 
   hardware.trackpoint = {
     enable = true;
