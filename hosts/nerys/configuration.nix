@@ -30,8 +30,17 @@
 
     firewall = {
       enable = true;
+      # Do not allow ports outside of home network at this moment.
+      allowedTCPPorts = [];
+      # LAN ports, specified via raw iptables commands to specify CIDR
+      # 3000: node development server
+      # 18266: port I use for flashing esp8266 devices OTA
       # 24800: barrier software KVM
-      allowedTCPPorts = [ 24800 ];
+      extraCommands = ''
+        iptables -A INPUT -p tcp --dport 3000 -s 192.168.1.0/24 -j ACCEPT
+        iptables -A INPUT -p tcp --dport 18266 -s 192.168.1.0/24 -j ACCEPT
+        iptables -A INPUT -p tcp --dport 24800 -s 192.168.1.0/24 -j ACCEPT
+      '';
     };
   };
 
