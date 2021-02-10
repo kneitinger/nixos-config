@@ -176,8 +176,7 @@
     libinput = {
       enable = true;
       # Natural-scolling only on touchpad
-      naturalScrolling = true;
-      additionalOptions = ''MatchIsTouchpad "on"'';
+      touchpad.naturalScrolling = true;
     };
 
     # Configure keymap in X11 and turn capslock into control
