@@ -154,6 +154,7 @@
         gnome3.zenity
         i3lock #default i3 screen locker
         (i3pystatus.override {extraLibs= [python3Packages.pytz];})
+        i3status-rust
         inotify-tools
         lxappearance
         networkmanagerapplet
@@ -269,22 +270,20 @@
     blueberry
     bottom
     ccache
-    chromium
-    clinfo
     direnv
     dmrconfig
     docker-compose
     firefox
     freecad
+    fritzing
     fzf
     gcc
     gimp
     gnome3.file-roller
+    gnome3.gnome-calculator
     gnumake
     inkscape-with-extensions
-    joplin-desktop
     jq
-    kdeApplications.kdeconnect-kde
     keepassxc
     lm_sensors
     meld
@@ -294,14 +293,14 @@
     nodejs
     obs-studio
     patchelf
-    phoronix-test-suite
+    pick-colour-picker
     pkg-config
+    platformio
     powertop
     python3Full
     python3Packages.pynvim
     qemu_kvm
     rsync
-    rustup
     scrot
     shellcheck
     signal-desktop
@@ -311,7 +310,9 @@
     tdesktop #telegram
     teensy-loader-cli
     tig
+    tor-browser-bundle-bin
     usbutils
+    unzip
     vlc
     vulkan-tools
     xcape
@@ -319,9 +320,7 @@
     xdotool
     youtube-dl
     zathura
-    zoom-us
   ];
-
 
   system.stateVersion = "21.03";
 }
