@@ -9,7 +9,5 @@
     enable = true;
     package = pkgs.pulseaudioFull;
     extraModules = [ pkgs.pulseaudio-modules-bt ];
-    # For Steam
-    support32Bit = true;
   };
 }

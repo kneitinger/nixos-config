@@ -308,7 +308,6 @@
     slack
     snes9x-gtk
     spotify
-    steam
     tdesktop #telegram
     teensy-loader-cli
     tig
