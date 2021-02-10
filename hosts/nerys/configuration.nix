@@ -16,7 +16,7 @@
       # Use NixOS/nixos-hardware for laptop specific settings
       #    Kernel > 5.8, acpi_backlight=native kernel param, acpi_call module,
       #    trackpoint enable & trackpoint emulate_wheel, tlp enable,
-      #    vm-swappiness=1, fstrim enable, 
+      #    vm-swappiness=1, fstrim enable, etc.
       <nixos-hardware/lenovo/thinkpad/t14s/amd/gen1>
     ];
 
@@ -105,7 +105,6 @@
     jost # <3 https://indestructibletype.com <3
   ];
 
-
   #
   # Xorg
   #
@@ -181,7 +180,6 @@
   };
   # Sets the preferred terminal emulator for i3-sensible-terminal
   environment.sessionVariables.TERMINAL = [ "alacritty" ];
-
 
   #
   # Services
@@ -262,6 +260,7 @@
       #enableSSHSupport = true;
     };
   };
+
   # System-wide packages
   environment.systemPackages = with pkgs; [
     alacritty
