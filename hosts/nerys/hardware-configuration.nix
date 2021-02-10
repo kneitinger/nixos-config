@@ -8,44 +8,18 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "nvme" "ehci_pci" "xhci_pci" "sdhci_pci" ];
+  boot.initrd.availableKernelModules =
+    [ "nvme" "xhci_pci" "usbhid" "usb_storage" "sd_mod" "sdhci_pci"
+    ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
+  boot.initrd.luks.devices.cryptroot =
+    { device = "/dev/disk/by-uuid/a7f22a4f-94ab-4d0c-8d45-2c0fc943b148";
+    };
 
   fileSystems."/" =
-    { device = "rpool/system/root";
-      fsType = "zfs";
-    };
-
-  fileSystems."/nix" =
-    { device = "rpool/local/nix";
-      fsType = "zfs";
-    };
-
-  fileSystems."/nix/store" =
-    { device = "/nix/store";
-      fsType = "none";
-      options = [ "bind" ];
-    };
-
-  fileSystems."/var" =
-    { device = "rpool/system/var";
-      fsType = "zfs";
-    };
-
-  fileSystems."/home" =
-    { device = "rpool/user/home";
-      fsType = "zfs";
-    };
-
-  fileSystems."/var/lib/docker" =
-    { device = "rpool/system/docker";
-      fsType = "zfs";
-    };
-
-  fileSystems."/home/leaf" =
-    { device = "rpool/user/home/leaf";
+    { device = "rpool/NIXOS/system/root";
       fsType = "zfs";
     };
 
@@ -54,7 +28,45 @@
       fsType = "vfat";
     };
 
-  swapDevices = [ ];
+  fileSystems."/var" =
+    { device = "rpool/NIXOS/system/var";
+      fsType = "zfs";
+    };
 
-  powerManagement.cpuFreqGovernor = lib.mkDefault "ondemand";
+  fileSystems."/nix" =
+    { device = "rpool/NIXOS/local/nix";
+      fsType = "zfs";
+    };
+
+  fileSystems."/home/leaf" =
+    { device = "rpool/NIXOS/home/leaf";
+      fsType = "zfs";
+    };
+
+  fileSystems."/home/leaf/art" =
+    { device = "rpool/DATA/art";
+      fsType = "zfs";
+    };
+
+  fileSystems."/home/leaf/music" =
+    { device = "rpool/DATA/music";
+      fsType = "zfs";
+    };
+
+  fileSystems."/home/leaf/r" =
+    { device = "rpool/DATA/code";
+      fsType = "zfs";
+    };
+
+  fileSystems."/home/leaf/downloads" =
+    { device = "rpool/DATA/downloads";
+      fsType = "zfs";
+    };
+
+  fileSystems."/home/leaf/documents" =
+    { device = "rpool/DATA/documents";
+      fsType = "zfs";
+    };
+
+  swapDevices = [ ];
 }
