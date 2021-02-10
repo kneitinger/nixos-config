@@ -4,6 +4,8 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+
+      # Include repo modules
       ../../modules/minimum.nix
       ../../modules/audio.nix
       ../../modules/cpu-amd.nix
@@ -16,7 +18,6 @@
       #    trackpoint enable & trackpoint emulate_wheel, tlp enable,
       #    vm-swappiness=1, fstrim enable, 
       <nixos-hardware/lenovo/thinkpad/t14s/amd/gen1>
-      ./hardware-configuration.nix
     ];
 
   networking = {
