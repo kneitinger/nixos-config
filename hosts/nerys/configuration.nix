@@ -210,11 +210,20 @@
 
     picom = {
       enable = true;
+      vSync = true;
       fade = false;
       inactiveOpacity = 1.0;
       shadow = true;
       shadowOpacity = 0.82;
-      opacityRules = [ "96:class_g = 'Rofi'" ];
+      backend = "glx";
+      opacityRules = [
+        "96:class_g = 'Rofi'"
+        "0:_NET_WM_STATE@[0]:32a *= '_NET_WM_STATE_HIDDEN'"
+        "0:_NET_WM_STATE@[1]:32a *= '_NET_WM_STATE_HIDDEN'"
+        "0:_NET_WM_STATE@[2]:32a *= '_NET_WM_STATE_HIDDEN'"
+        "0:_NET_WM_STATE@[3]:32a *= '_NET_WM_STATE_HIDDEN'"
+        "0:_NET_WM_STATE@[4]:32a *= '_NET_WM_STATE_HIDDEN'"
+      ];
     };
 
     gvfs.enable = true;
