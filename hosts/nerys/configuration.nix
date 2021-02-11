@@ -125,7 +125,7 @@
 
       # Lock
       locker = "${config.security.wrapperDir}/physlock";
-      time = 20;
+      time = 25;
 
       # Suspend
       killer = "/run/current-system/systemd/bin/systemctl suspend";
