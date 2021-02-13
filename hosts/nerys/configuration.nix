@@ -268,7 +268,6 @@
     light.enable = true;
     ssh = {
       startAgent = true;
-      askPassword = pkgs.lib.mkForce "${pkgs.plasma5.ksshaskpass.out}/bin/ksshaskpass";
     };
     gnupg.agent = {
       enable = true;
