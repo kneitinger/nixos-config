@@ -246,8 +246,12 @@
       };
     };
   };
-  location.provider = "geoclue2";
 
+  location = {
+    provider = "manual";
+    latitude = 45.0;
+    longitude = -122.5;
+  };
 
   #
   # Applications
