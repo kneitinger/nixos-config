@@ -114,6 +114,10 @@
     };
 
     displayManager = {
+      lightdm = {
+        enable = true;
+        background = "/etc/nixos/background-image";
+      };
       defaultSession = "none+i3";
       sessionCommands = ''
         ${pkgs.dunst}/bin/dunst &
